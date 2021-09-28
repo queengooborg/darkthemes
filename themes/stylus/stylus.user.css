@@ -1,4 +1,3 @@
-@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne"), url-prefix("chrome-extension://kdinfijomkigjcjcbigolloleeiianaif"), url-prefix("moz-extension://da931956-cdeb-254f-b488-aa1abf9bf94f") {
 /* ==UserStyle==
 @name           Stylus (Extension) - Dark Theme
 @namespace      queengooborg
@@ -7,6 +6,8 @@
 @version        1.0
 @license        GPL-3.0
 ==/UserStyle== */
+
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne"), url-prefix("chrome-extension://kdinfijomkigjcjcbigolloleeiianaif"), url-prefix("moz-extension://da931956-cdeb-254f-b488-aa1abf9bf94f") {
 
 /* -=- Root Colors -=- */
 :root {
