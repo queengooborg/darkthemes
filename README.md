@@ -15,6 +15,7 @@ Found a styling issue?  Want me to add a new site?  Feel free to let me know by 
 A dark theme for the Geocaching.com website, as well as a few other related websites (GeoCheck.org, GeoChecker.com, Certitudes.org, and PathTags.com).
 
 [![Install directly with Stylus/Cascadea](https://img.shields.io/badge/Install%20directly%20with-Stylus/Cascadea-00adad.svg?style=for-the-badge)](https://github.com/queengooborg/darkthemes/raw/main/themes/geocaching/geocaching.user.css)
+[![View on UserStyles.world](https://img.shields.io/badge/View%20on-UserStyles.world-75fafc.svg?style=for-the-badge)](https://userstyles.world/style/1269)
 
 ![Screenshot of Geocaching.com](themes/geocaching/geocaching.screenshot.png)
 
@@ -22,6 +23,7 @@ A dark theme for the Geocaching.com website, as well as a few other related webs
 A dark theme for the MDN web docs pages (developer.mozilla.org), updated for compatibility with their new [`Yari`](https://github.com/mdn/yari) layout engine.
 
 [![Install directly with Stylus/Cascadea](https://img.shields.io/badge/Install%20directly%20with-Stylus/Cascadea-00adad.svg?style=for-the-badge)](https://github.com/queengooborg/darkthemes/raw/main/themes/mdn/mdn.user.css)
+[![View on UserStyles.world](https://img.shields.io/badge/View%20on-UserStyles.world-75fafc.svg?style=for-the-badge)](https://userstyles.world/style/1268)
 
 ![Screenshot of MDN Web Docs homepage](themes/mdn/mdn.screenshot.png)
 
@@ -29,6 +31,7 @@ A dark theme for the MDN web docs pages (developer.mozilla.org), updated for com
 A dark theme for the Stylus extension, compatible with Chrome/Edge, Opera, and Firefox editions.
 
 [![Install directly with Stylus/Cascadea](https://img.shields.io/badge/Install%20directly%20with-Stylus/Cascadea-00adad.svg?style=for-the-badge)](https://github.com/queengooborg/darkthemes/raw/main/themes/stylus/stylus.user.css)
+[![View on UserStyles.world](https://img.shields.io/badge/View%20on-UserStyles.world-75fafc.svg?style=for-the-badge)](https://userstyles.world/style/1270)
 
 ![Screenshot of Stylus](themes/stylus/stylus.screenshot.png)
 
@@ -36,5 +39,6 @@ A dark theme for the Stylus extension, compatible with Chrome/Edge, Opera, and F
 A dark theme for [Wikipedia](https://wikipedia.org) and [Wikimedia](https://wikimedia.org).
 
 [![Install directly with Stylus/Cascadea](https://img.shields.io/badge/Install%20directly%20with-Stylus/Cascadea-00adad.svg?style=for-the-badge)](https://github.com/queengooborg/darkthemes/raw/main/themes/wikipedia/wikipedia.user.css)
+[![View on UserStyles.world](https://img.shields.io/badge/View%20on-UserStyles.world-75fafc.svg?style=for-the-badge)](https://userstyles.world/style/1271)
 
 ![Screenshot of Wikipedia Homepage](themes/wikipedia/wikipedia.screenshot.png)
