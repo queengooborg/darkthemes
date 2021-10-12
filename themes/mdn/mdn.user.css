@@ -3,11 +3,11 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for the MDN web docs pages (developer.mozilla.org), updated for compatibility with their new Yari layout engine.  Colors are adjustable via the variables set on :root.
-@version        1.0
+@version        1.1
 @license        GPL-3.0
 ==/UserStyle== */
 
-@-moz-document domain("developer.mozilla.org"), domain("mdn.github.io"), domain("mdn.mozillademos.org"), domain("interactive-examples.mdn.mozilla.net"), domain("yari-demos.prod.mdn.mozit.cloud") {
+@-moz-document domain("developer.mozilla.org"), domain("mdn.github.io"), domain("mdn.mozillademos.org"), domain("interactive-examples.mdn.mozilla.net"), domain("yari-demos.prod.mdn.mozit.cloud"), regexp(".*localhost:5000.*") {
 :root {
     --background: #151515;
     --background-2: #191919;
@@ -26,6 +26,7 @@
     --link-visited: #96a;
     --foreground-disabled: #ddd;
     --background-disabled: #777;
+    --background-highlight: #48430f;
     --foreground-error: #fff;
     --foreground-warning: #fff;
     --foreground-info: #fff;
@@ -53,7 +54,7 @@ html, body, main, .document-head, .user-head, .home-masthead, .main-menu, .wiki-
     color: var(--foreground);
 }
 
-button, .crumbs span::after, .quick-links .toggleable > a i[class^="icon-"], .quick-links .toggleable > a, .toggler i[class^="icon-"], #wikiArticle i.icon-thumbs-down-alt, .light h2, .dark h2, .subnav .toggle-container .toggleable .toggler, .bc-table .bc-history, .bc-supports-unknown, .dropdown-container .dropdown-menu-items a, .dropdown-container .dropdown-menu-items button, .article h2 a:link, .article h2 a:visited, .article h2 code, .notecard.note a, .notecard.note a code, .main-page-content h2 a:link, .main-page-content h2 a:visited, .search-results-list .title a:link, .search-results-list .title a:visited, .login > a:link, .toolbox > ul > li > a, .crumbs li a.crumb-current-page:link, .crumbs li a.crumb-current-page:visited, .breadcrumbs li a.crumb-current-page:link, .breadcrumbs li a.crumb-current-page:visited, .dropdown-container .dropdown-menu-label, .main-nav li ul li, .main-page-content h2 a:link, .main-page-content h2 a:visited, .main-page-content h3 a:link, .main-page-content h3 a:visited {
+button, .crumbs span::after, .quick-links .toggleable > a i[class^="icon-"], .quick-links .toggleable > a, .toggler i[class^="icon-"], #wikiArticle i.icon-thumbs-down-alt, .light h2, .dark h2, .subnav .toggle-container .toggleable .toggler, .bc-table .bc-history, .bc-supports-unknown, .dropdown-container .dropdown-menu-items a, .dropdown-container .dropdown-menu-items button, .article h2 a:link, .article h2 a:visited, .article h2 code, .notecard.note a, .notecard.note a code, .main-page-content h2 a:link, .main-page-content h2 a:visited, .search-results-list .title a:link, .search-results-list .title a:visited, .login > a:link, .toolbox > ul > li > a, .crumbs li a.crumb-current-page:link, .crumbs li a.crumb-current-page:visited, .breadcrumbs li a.crumb-current-page:link, .breadcrumbs li a.crumb-current-page:visited, .dropdown-container .dropdown-menu-label, .main-nav li ul li, .main-page-content h2 a:link, .main-page-content h2 a:visited, .main-page-content h3 a:link, .main-page-content h3 a:visited, .header-search input.search-input-field {
     color: var(--foreground);
 }
 
@@ -61,12 +62,12 @@ button, .crumbs span::after, .quick-links .toggleable > a i[class^="icon-"], .qu
     color: var(--foreground-2);
 }
 
-.nav-main-item > a:focus, .nav-main-item > a:hover, table.compat-table td, .newsletter-box, .toc, .text-content .card-grid > li, .communitybox, .overheadIndicator, .activity tbody tr:nth-child(even), .subnav .toggleable.current, .subnav > ol > li.current, .text-content table.standard-table:not(.learn-box):not(.nostripe) tr:nth-child(2n+1) td, .moreinfo, .text-content .learn-box, #nav-sec > ul > li > a:hover, #nav-sec > ul > li > a:focus, .home-hacks, .light h2, .dark h2, .dashboard-table tbody tr:hover, .callout-box, .text-content table.fullwidth-table th, .revision-list li:nth-child(2n+1), table td, ul.main-menu .top-level-entry {
+.nav-main-item > a:focus, .nav-main-item > a:hover, table.compat-table td, .newsletter-box, .toc, .text-content .card-grid > li, .communitybox, .overheadIndicator, .activity tbody tr:nth-child(even), .subnav .toggleable.current, .subnav > ol > li.current, .text-content table.standard-table:not(.learn-box):not(.nostripe) tr:nth-child(2n+1) td, .moreinfo, .text-content .learn-box, #nav-sec > ul > li > a:hover, #nav-sec > ul > li > a:focus, .home-hacks, .light h2, .dark h2, .dashboard-table tbody tr:hover, .callout-box, .text-content table.fullwidth-table th, .revision-list li:nth-child(2n+1), table td, ul.main-menu .top-level-entry, .header-search .search-results {
     background-color: var(--background-2);
     color: var(--foreground);
 }
 
-#main-header, .text-content table.standard-table:not(.learn-box) th, .nav-footer, .document-toc, .submenu, .activity thead, ul.main-menu li ul, #nav-sec > ul > li > a, .nav-main-search, .interactive, .output, .bc-table tbody tr:nth-child(2n), .bc-table .bc-history, .text-content table.bc-table, .bc-supports-unknown, .text-content table.fullwidth-table, .document-toc ul, .standard-table td, .standard-table th, .metadata, .properties td, .properties th, .breadcrumb-locale-container, table th, .main-page-content .inline.optional, .main-page-content .inline.readonly {
+#main-header, .text-content table.standard-table:not(.learn-box) th, .nav-footer, .document-toc, .submenu, .activity thead, ul.main-menu li ul, #nav-sec > ul > li > a, .nav-main-search, .interactive, .output, .bc-table tbody tr:nth-child(2n), .bc-table .bc-history, .text-content table.bc-table, .bc-supports-unknown, .text-content table.fullwidth-table, .document-toc ul, .standard-table td, .standard-table th, .metadata, .properties td, .properties th, .breadcrumb-locale-container, table th, .main-page-content .inline.optional, .main-page-content .inline.readonly, .header-search .search-results .result-item.highlight, .header-search .search-results .result-item:hover {
     background-color: var(--background-3);
 }
 
@@ -223,6 +224,10 @@ a:visited {
     background-color: rgba(100, 50, 50, 0.3);
 }
 
+.header-search .search-results mark {
+    background-color: var(--background-highlight);
+}
+
 /* "Special" background + foreground combinations */
 .subnav > ol > li > a:hover, ul.tags li, ul.tags li a, ul.tags a, td[tabindex]:hover .bc-history-link, td[tabindex]:focus .bc-history-link {
     background-color: var(--link);
@@ -324,7 +329,7 @@ a.button, .reviews, .text-content pre, .newsletter-box, button, input {
     padding-left: 40px;
 }
 
-ul.main-menu li ul {
+ul.main-menu li ul, .header-search .search-results {
     box-shadow: 0 2px 20px 0 black;
 }
 
