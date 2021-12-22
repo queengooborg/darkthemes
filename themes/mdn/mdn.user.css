@@ -144,6 +144,7 @@ li.webextension-api-sidebar {
 
 .contributors, .search-results-list mark {
     color: var(--foreground-muted);
+    background-color: var(--background-warning);
 }
 
 *[style="color: #888;"] {
