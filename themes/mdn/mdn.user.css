@@ -3,7 +3,7 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for the MDN web docs pages (developer.mozilla.org), updated for compatibility with their new Yari layout engine.  Colors are adjustable via the variables set on :root.
-@version        1.1
+@version        1.2
 @license        GPL-3.0
 ==/UserStyle== */
 
@@ -49,7 +49,7 @@
     --selection-fg: #000;
 }
 
-html, body, main, .document-head, .user-head, .home-masthead, .main-menu, .wiki-main-content, .global-notice, .text-content table.standard-table:not(.learn-box) td, .search-pane, #example-element, #bitmap, body > div, ul.main-menu, .page-header-main, .bc-table, .header-search {
+html, body, main, .document-head, .user-head, .home-masthead, .main-menu, .wiki-main-content, .global-notice, .text-content table.standard-table:not(.learn-box) td, .search-pane, #example-element, #bitmap, ul.main-menu, .page-header-main, .bc-table, .header-search {
     background-color: var(--background);
     color: var(--foreground);
 }
@@ -144,7 +144,7 @@ li.webextension-api-sidebar {
 
 .contributors, .search-results-list mark {
     color: var(--foreground-muted);
-    background-color: var(--background-warning);
+    background: var(--background-highlight);
 }
 
 *[style="color: #888;"] {
@@ -396,7 +396,7 @@ span[style*="background: #eaeff2"]:active {
 }
 
 /* Inverting Images */
-.logo, header h4::before, .blockIndicator::before, .inlineIndicator.secureContexts::before, .geckoVersionNote::before, .inheritsbox::before, .note::before, .notice::before, .overheadIndicator::before, .standardNoteBlock::before, .warning::before, html[dir="ltr"] .external-icon:not([href^="https://mdn.mozillademos.org"]):not(.ignore-external)::before, html[dir="rtl"] .external-icon:not([href^="https://mdn.mozillademos.org"]):not(.ignore-external)::after, .select-browser-block > .browser .browser-logo img, a.external:before, .bc-icons i:before, .legend-icons:before, .breadcrumbs-container li .breadcrumb-penultimate:after, .breadcrumbs-container li .breadcrumb:after {
+.logo, header h4::before, .blockIndicator::before, .inlineIndicator.secureContexts::before, .geckoVersionNote::before, .inheritsbox::before, .note::before, .notice::before, .overheadIndicator::before, .standardNoteBlock::before, .warning::before, html[dir="ltr"] .external-icon:not([href^="https://mdn.mozillademos.org"]):not(.ignore-external)::before, html[dir="rtl"] .external-icon:not([href^="https://mdn.mozillademos.org"]):not(.ignore-external)::after, .select-browser-block > .browser .browser-logo img, a.external:before, .bc-icons i:before, .legend-icons:before, .breadcrumbs-container li .breadcrumb-penultimate:after, .breadcrumbs-container li .breadcrumb:after, a.external:after {
     filter: invert(100%);
 }
 
