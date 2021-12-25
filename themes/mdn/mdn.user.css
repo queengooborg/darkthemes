@@ -3,7 +3,7 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for the MDN web docs pages (developer.mozilla.org), updated for compatibility with their new Yari layout engine.  Colors are adjustable via the variables set on :root.
-@version        1.2.1
+@version        1.2.2
 @license        GPL-3.0
 ==/UserStyle== */
 
@@ -14,19 +14,23 @@
     --background-3: #222;
     --background-input: #000;
     --background-input-hover: #151515;
+    --background-disabled: #777;
+    --background-highlight: #48430f;
+
     --foreground: #ccc;
     --foreground-2: #aab;
     --foreground-muted: #999;
     --foreground-input: #aaa;
     --foreground-input-hover: #fff;
+    --foreground-disabled: #ddd;
+
     --border: solid 0.5px #353535;
     --border-color: #353535;
+
     --link: #369;
     --link-hover: #47a;
     --link-visited: #96a;
-    --foreground-disabled: #ddd;
-    --background-disabled: #777;
-    --background-highlight: #48430f;
+
     --foreground-error: #fff;
     --foreground-warning: #fff;
     --foreground-info: #fff;
@@ -36,6 +40,7 @@
     --background-info: #138;
     --background-success: #151;
     --background-archived: #400;
+
     --syntax-foreground: #f5f5f5;
     --syntax-foreground-2: #ffffff;
     --syntax-background: #000000;
@@ -46,15 +51,22 @@
     --syntax-keyword: #d381c3;
     --syntax-number: #fc6d24;
     --syntax-string: #a1c659;
+
     --selection-fg: #000;
+
+    --bcd-foreground: #fff;
+    --bcd-background-yes: #181;
+    --bcd-background-partial: #861;
+    --bcd-background-preview: #025;
+    --bcd-background-no: #811;
 }
 
-html, body, main, .document-head, .user-head, .home-masthead, .main-menu, .wiki-main-content, .global-notice, .text-content table.standard-table:not(.learn-box) td, .search-pane, #example-element, #bitmap, ul.main-menu, .page-header-main, .bc-table, .header-search {
+html, body, main, .document-head, .user-head, .home-masthead, .main-menu, .wiki-main-content, .global-notice, .text-content table.standard-table:not(.learn-box) td, .search-pane, #example-element, #bitmap, ul.main-menu, .page-header-main, .bc-table, .header-search, .bc-platforms td, .bc-browsers td {
     background-color: var(--background);
     color: var(--foreground);
 }
 
-button, .crumbs span::after, .quick-links .toggleable > a i[class^="icon-"], .quick-links .toggleable > a, .toggler i[class^="icon-"], #wikiArticle i.icon-thumbs-down-alt, .light h2, .dark h2, .subnav .toggle-container .toggleable .toggler, .bc-table .bc-history, .bc-supports-unknown, .dropdown-container .dropdown-menu-items a, .dropdown-container .dropdown-menu-items button, .article h2 a:link, .article h2 a:visited, .article h2 code, .notecard.note a, .notecard.note a code, .main-page-content h2 a:link, .main-page-content h2 a:visited, .search-results-list .title a:link, .search-results-list .title a:visited, .login > a:link, .toolbox > ul > li > a, .crumbs li a.crumb-current-page:link, .crumbs li a.crumb-current-page:visited, .breadcrumbs li a.crumb-current-page:link, .breadcrumbs li a.crumb-current-page:visited, .dropdown-container .dropdown-menu-label, .main-nav li ul li, .main-page-content h2 a:link, .main-page-content h2 a:visited, .main-page-content h3 a:link, .main-page-content h3 a:visited, .header-search input.search-input-field {
+button, .crumbs span::after, .quick-links .toggleable > a i[class^="icon-"], .quick-links .toggleable > a, .toggler i[class^="icon-"], #wikiArticle i.icon-thumbs-down-alt, .light h2, .dark h2, .subnav .toggle-container .toggleable .toggler, .dropdown-container .dropdown-menu-items a, .dropdown-container .dropdown-menu-items button, .article h2 a:link, .article h2 a:visited, .article h2 code, .notecard.note a, .notecard.note a code, .main-page-content h2 a:link, .main-page-content h2 a:visited, .search-results-list .title a:link, .search-results-list .title a:visited, .login > a:link, .toolbox > ul > li > a, .crumbs li a.crumb-current-page:link, .crumbs li a.crumb-current-page:visited, .breadcrumbs li a.crumb-current-page:link, .breadcrumbs li a.crumb-current-page:visited, .dropdown-container .dropdown-menu-label, .main-nav li ul li, .main-page-content h2 a:link, .main-page-content h2 a:visited, .main-page-content h3 a:link, .main-page-content h3 a:visited, .header-search input.search-input-field {
     color: var(--foreground);
 }
 
@@ -379,20 +391,25 @@ span[style*="background: #eaeff2"]:active {
 
 /* Compat Tables */
 
+.bc-supports-no, .bc-supports-partial, .bc-supports-unknown, .bc-supports-yes, .bc-table .bc-history {
+    color: var(--bcd-foreground);
+}
+
 .bc-supports-yes {
-    background-color: #181;
-    color: #fff;
+    background-color: var(--bcd-background-yes);
 }
 
 .bc-supports-partial {
-    background-color: #861;
-    color: #fff;
+    background-color: var(--bcd-background-partial);
+}
+
+.bc-supports-preview {
+    background-color: var(--bcd-background-preview);
 }
 
 .bc-supports-no {
-    background-color: #811;
+    background-color: var(--bcd-background-no);
     background-image: linear-gradient(to bottom right, rgba(94, 3, 6, .25) 0, rgba(94, 3, 6, .25) 1px, transparent 0, transparent 67px, rgba(94, 3, 6, .25) 0, rgba(94, 3, 6, .25) 73px, transparent 0, transparent 138px, rgba(94, 3, 6, .25) 0, rgba(94, 3, 6, .25) 144px, transparent 0), linear-gradient(to bottom left, rgba(94, 3, 6, .25) 0, rgba(94, 3, 6, .25) 1px, transparent 0, transparent 67px, rgba(94, 3, 6, .25) 0, rgba(94, 3, 6, .25) 73px, transparent 0, transparent 138px, rgba(94, 3, 6, .25) 0, rgba(94, 3, 6, .25) 144px, transparent 0);
-    color: #fff;
 }
 
 /* Inverting Images */
