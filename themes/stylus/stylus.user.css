@@ -3,7 +3,7 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for the Stylus extension, compatible with Chrome/Edge, Opera, and Firefox editions.  Colors are adjustable via the variables set on :root.
-@version        1.0
+@version        1.1
 @license        GPL-3.0
 ==/UserStyle== */
 
@@ -21,6 +21,10 @@
     --main: #2f6f64;
     --error: #ec0404;
     --border: #505050;
+    --update-bg: #332e00;
+    --update-border: #4e4618;
+    --update-ready-bg: #003327;
+    --update-ready-border: #3f8d8b;
 }
 
 /* -=- Styling -=- */
@@ -121,5 +125,15 @@ content:'?' !important;
 
 #options-close-icon .svg-icon, .svg-icon, .svg-icon.info:hover, .svg-icon.settings:hover {
     fill: var(--foreground);
+}
+    
+.newUI .updater-icons > :not(.check-update):after {
+    border-color: var(--update-border);
+    background-color: var(--update-bg);
+}
+
+.newUI .can-update:not([data-details$="locally edited"]) .update:after {
+    border-color: var(--update-ready-border);
+    background-color: var(--update-ready-bg);
 }
 }
