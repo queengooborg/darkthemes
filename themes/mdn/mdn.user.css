@@ -3,11 +3,11 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for the MDN web docs pages (developer.mozilla.org), updated for compatibility with their new Yari layout engine.  Colors are adjustable via the variables set on :root.
-@version        1.2.3
+@version        1.2.4
 @license        GPL-3.0
 ==/UserStyle== */
 
-@-moz-document domain("developer.mozilla.org"), domain("mdn.github.io"), domain("mdn.mozillademos.org"), domain("interactive-examples.mdn.mozilla.net"), domain("yari-demos.prod.mdn.mozit.cloud"), regexp(".*localhost:5000.*") {
+@-moz-document domain("developer.mozilla.org"), domain("mdn.github.io"), domain("mdn.mozillademos.org"), domain("interactive-examples.mdn.mozilla.net"), domain("yari-demos.prod.mdn.mozit.cloud"), regexp(".*localhost:5042.*") {
 :root {
     --background: #151515;
     --background-2: #191919;
