@@ -3,7 +3,7 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for the MDN web docs pages (developer.mozilla.org), updated for compatibility with their new Yari layout engine.  Colors are adjustable via the variables set on :root.
-@version        1.2.4
+@version        1.2.5
 @license        GPL-3.0
 ==/UserStyle== */
 
@@ -293,7 +293,7 @@ a:visited {
     color: var(--foreground-error);
 }
 
-mark, .notice, .indicator-warning, .reviews, .draft, .privilegedBadge, .renamed, .secureContexts, .todo, .translationInProgress, .warning-review {
+mark, .notice, .indicator-warning, .reviews, .draft, .privilegedBadge, .renamed, .secureContexts, .todo, .translationInProgress, .warning-review, #document-flaws .macro-filepath-in-prerequisite {
     background-color: var(--background-warning);
     color: var(--foreground-warning);
 }
