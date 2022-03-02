@@ -20,6 +20,8 @@ A dark theme for the Geocaching.com website, as well as a few other related webs
 ![Screenshot of Geocaching.com](themes/geocaching/geocaching.screenshot.png)
 
 ### Mozilla Developer Network
+**This style is now deprecated, as MDN has a built-in dark theme!**
+
 A dark theme for the MDN web docs pages (developer.mozilla.org), updated for compatibility with their new [`Yari`](https://github.com/mdn/yari) layout engine.
 
 [![Install directly with Stylus/Cascadea](https://img.shields.io/badge/Install%20directly%20with-Stylus/Cascadea-00adad.svg?style=for-the-badge)](https://github.com/queengooborg/darkthemes/raw/main/themes/mdn/mdn.user.css)
