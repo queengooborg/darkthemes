@@ -3,7 +3,7 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for the Geocaching.com website, as well as a few other related websites (GeoCheck.org, GeoChecker.com, Certitudes.org, PathTags.com, and Project-GC.com).  Colors are adjustable via the variables set on :root.  https://www.queengoob.org/darkthemes
-@version        2.0.1
+@version        2.1
 @license        GPL-3.0
 ==/UserStyle== */
 
@@ -29,6 +29,7 @@
         --error: #ec0404;
         --error-bg: #620303;
         --warn: #f0ad4e;
+        --warn-bg: #8d650c;
         --notice: #3d76c5;
         --notice-bg: #20406c;
         --notice-hover: #5997ed;
@@ -649,22 +650,22 @@
         border-color: var(--border);
     }
     
-    #pgcMainMenu.navbar-pgc .navbar-nav>li>a:hover, #pgcMainMenu .navbar-pgc .navbar-nav>li>a:focus, #pgcMainMenu.navbar-pgc .navbar-nav>li>a, #pgcMainMenu.navbar-pgc .navbar-nav>.active>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a:hover, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a:focus, #pgcMainMenu .dropdown-menu>li>a, .list-unstyled>li>a, .close:hover, .close:focus, .navbar-default .navbar-nav>li>a, .qa-nav-user, .qa-widget-side h2, .qa-nav-cat-note {
+    #pgcMainMenu.navbar-pgc .navbar-nav>li>a:hover, #pgcMainMenu .navbar-pgc .navbar-nav>li>a:focus, #pgcMainMenu.navbar-pgc .navbar-nav>li>a, #pgcMainMenu.navbar-pgc .navbar-nav>.active>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a:hover, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a:focus, #pgcMainMenu .dropdown-menu>li>a, .list-unstyled>li>a, .close:hover, .close:focus, .navbar-default .navbar-nav>li>a, .qa-nav-user, .qa-widget-side h2, .qa-nav-cat-note, legend.filter, .ms-container .ms-selectable li.ms-elem-selectable, .ms-container .ms-selection li.ms-elem-selection {
         color: var(--foreground);
     }
     
-    #pgcMainMenu.navbar-pgc .navbar-nav>.active>a:hover, #pgcMainMenu.navbar-pgc .navbar-nav>li>a:hover, #pgcMainMenu.navbar-pgc .navbar-nav>li>a:focus, #pgcMainMenu .dropdown-menu, .navbar-default, .well, div.dashboard-card-header, .popover, .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th, .list-group-item, .pagination>li>a, .pagination>li>span, .input-group-addon, div.well-white, .qa-nav-main, .qa-widget-side, .qa-nav-cat, .qa-footer-bottom-group, .qa-suggest-next, .qa-tag-link, .qa-widget-side .qa-q-view-tag-item, .qa-widget-side>div>a, .qa-nav-sub {
+    #pgcMainMenu.navbar-pgc .navbar-nav>.active>a:hover, #pgcMainMenu.navbar-pgc .navbar-nav>li>a:hover, #pgcMainMenu.navbar-pgc .navbar-nav>li>a:focus, #pgcMainMenu .dropdown-menu, .navbar-default, .well, div.dashboard-card-header, .popover, .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th, .list-group-item, .pagination>li>a, .pagination>li>span, .input-group-addon, div.well-white, .qa-nav-main, .qa-widget-side, .qa-nav-cat, .qa-footer-bottom-group, .qa-suggest-next, .qa-tag-link, .qa-widget-side .qa-q-view-tag-item, .qa-widget-side>div>a, .qa-nav-sub, .ms-container .ms-selectable, .ms-container .ms-selection {
         background: var(--background-2);
         color: var(--foreground);
         border-color: var(--border);
     }
     
-    #pgcMainMenu.navbar-pgc .navbar-nav>.active>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a:hover, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a:hover, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus, .popover-title, .nav-tabs>li>a:hover, .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus, .qa-nav-sub-link:hover, .qa-nav-sub-selected {
+    #pgcMainMenu.navbar-pgc .navbar-nav>.active>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a:hover, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a:hover, #pgcMainMenu.navbar-pgc .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus, .popover-title, .nav-tabs>li>a:hover, .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus, .qa-nav-sub-link:hover, .qa-nav-sub-selected, pre, .btn-default:active, .btn-default.active, .jslider .jslider-value {
         background: var(--background-3);
         color: var(--foreground);
     }
     
-    .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .qa-browse-cat-item {
+    .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .qa-browse-cat-item, legend, .alert-info, .alert-danger {
         color: var(--foreground-2);
     }
     
@@ -690,17 +691,25 @@
         color: var(--main-hover);
     }
     
+    .ms-container .ms-selectable li.ms-hover, .ms-container .ms-selection li.ms-hover {
+        background: var(--notice-bg);
+    }
+    
+    #pgcMainMenu .dropdown-menu>li>a:hover, #pgcMainMenu .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a, .list-unstyled>li>a:hover, .list-unstyled>li>a:focus {
+        background: var(--notice-bg) !important;
+    }
+    
     .alert-info, .qa-sidebar, .qa-voting, .qa-a-count, .btn-info {
         background: var(--notice-bg);
         border-color: var(--notice);
     }
         
-    .qa-a-count-selected {
+    .qa-a-count-selected, .badge.badge-success {
         background: var(--success-bg);
         border-color: var(--success);
     }
     
-    .qa-a-count-zero {
+    .qa-a-count-zero, .badge.badge-danger, .alert-danger {
         background: var(--error-bg);
         border-color: var(--error);
     }
@@ -709,8 +718,13 @@
         color: var(--foreground);
     }
     
+    .btn-default:disabled, .btn-default[disabled], .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control, .pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus {
+        background-color: var(--background-3);
+        color: var(--foreground-disabled);
+    }
+    
     .label-warning {
-        background-color: var(--warn);
+        background-color: var(--warn-bg);
     }
     
     table {
@@ -721,12 +735,22 @@
          background-color: var(--table-background-alt);
     }
     
+    .btn-default {
+        text-shadow: 0 1px 0 var(--background-4);
+    }
+    
     .qa-suggest-next {
         box-shadow: 0 10px 15px 0 black inset, 0 0 5px 0 rgb(255 255 255 / 5%)
     }
     
     .qa-nav-main-link, .qa-tag-link, .qa-widget-side .qa-q-view-tag-item, .qa-widget-side>div>a, .qa-nav-sub-link, .qa-nav-sub-link:hover, .qa-nav-sub-selected {
         color: var(--foreground) !important;
+    }
+    
+    div[style*="background-color:#eff4f9;"] {
+        background-color: var(--background-2) !important;
+        color: var(--foreground) !important;
+        border-color: var(--border) !important;
     }
     
     /* Cookie Consent Bar */
@@ -767,6 +791,11 @@
     .cky-consent-bar.cky-classic #powered-by a {
         color: var(--foreground) !important;
     }
+    
+    /* Image Replacement */
+    img[title="Challenge difficulty"] {
+        filter: invert(100%);
+    }
 }
 
 @-moz-document url-prefix("https://project-gc.com/qa/") {
@@ -775,6 +804,7 @@
         color: var(--foreground);
     }
     
+    /* Image Replacement */
     body {
         background-image: url("data:image/jpeg;base64,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");
     }
