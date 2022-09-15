@@ -12,7 +12,9 @@ Found a styling issue?  Want me to add a new site?  Feel free to let me know by 
 ## Available Themes
 
 ### Geocaching
-A dark theme for the Geocaching.com website, as well as a few other related websites (GeoCheck.org, GeoChecker.com, Certitudes.org, and PathTags.com).
+A dark theme for the Geocaching.com website, as well as a few other related websites (GeoCheck.org, GeoChecker.com, Certitudes.org, PathTags.com, and Project-GC.com).
+
+_Note: the wiki pages for Project-GC are powered by MediaWiki, and as such the same theme for Wikipedia applies to those pages. To simplify maintenance, this stylesheet does not include styling for said pages. It is highly recommended to install the Wikipedia theme._
 
 [![Install directly with Stylus/Cascadea](https://img.shields.io/badge/Install%20directly%20with-Stylus/Cascadea-00adad.svg?style=for-the-badge)](https://github.com/queengooborg/darkthemes/raw/main/themes/geocaching/geocaching.user.css)
 [![View on UserStyles.world](https://img.shields.io/badge/View%20on-UserStyles.world-75fafc.svg?style=for-the-badge)](https://userstyles.world/style/1269)
@@ -28,7 +30,7 @@ A dark theme for the Stylus extension, compatible with Chrome/Edge, Opera, and F
 ![Screenshot of Stylus](themes/stylus/stylus.screenshot.png)
 
 ### Wikipedia
-A dark theme for [Wikipedia](https://wikipedia.org) and [Wikimedia](https://wikimedia.org).
+A dark theme for [Wikipedia](https://wikipedia.org), [Wikimedia](https://wikimedia.org) and other known MediaWiki-powered sites.
 
 [![Install directly with Stylus/Cascadea](https://img.shields.io/badge/Install%20directly%20with-Stylus/Cascadea-00adad.svg?style=for-the-badge)](https://github.com/queengooborg/darkthemes/raw/main/themes/wikipedia/wikipedia.user.css)
 [![View on UserStyles.world](https://img.shields.io/badge/View%20on-UserStyles.world-75fafc.svg?style=for-the-badge)](https://userstyles.world/style/1271)
