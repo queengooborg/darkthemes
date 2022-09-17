@@ -3,7 +3,7 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for Wikipedia, Wikimedia and other known MediaWiki-powered sites.  Colors are adjustable via the variables set on :root.  https://www.queengoob.org/darkthemes
-@version        2.0
+@version        2.1
 @license        GPL-3.0
 ==/UserStyle== */
 
@@ -1077,7 +1077,7 @@
 
     /* -=- Image Replacement -=- */
     .oo-ui-icon-search, .mw-ui-icon-search:before, .oo-ui-icon-infoFilled, .mw-ui-icon-infoFilled:before, .oo-ui-icon-puzzle, .mw-ui-icon-puzzle:before, .oo-ui-icon-wikiText, .mw-ui-icon-wikiText:before, .ve-ui-expandableContent-fade, .wikiEditor-ui-toolbar .tabs span.tab a:before, .oo-ui-icon-eye, .mw-ui-icon-eye:before {
-        filter: invert(1);
+        filter: invert(1) hue-rotate(180deg);
     }
     
     ul {
