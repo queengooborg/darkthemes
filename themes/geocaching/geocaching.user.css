@@ -3,7 +3,7 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for the Geocaching.com website, as well as a few other related websites (GeoCheck.org, GeoChecker.com, Certitudes.org, PathTags.com, and Project-GC.com).  Colors are adjustable via the variables set on :root.  https://www.queengoob.org/darkthemes
-@version        2.1.1
+@version        2.2
 @license        GPL-3.0
 ==/UserStyle== */
 
@@ -442,7 +442,7 @@
     /* Image Replacement */
     /* - General Images */
     .btn-settings, .close-reveal-modal, .menu a svg, .menu form svg, .message__owner svg, .flatpickr-next-month, .flatpickr-prev-month, .icon-svg-fill.charcoal, .icon-svg-fill.tempest, img[src="/account/app/ui-icons/icons/global/gps.svg"], .feature-list .feature-box svg, .pq-legend li img, .drafts-empty .media-left img, .cke .cke_button_off:not(.cke_button__source) .cke_button_icon:not(:hover), .cke .cke_button_disabled:not(.cke_button__source) .cke_button_icon, .treasure-filter-tool-tip, .cache-attributes-filter-tool-tip, .responsive-table-menu button.toggle:not(:hover)::after, .search-results-table th.sort-column.sort-asc a:after, .search-results-table th.sort-column.sort-desc a:after, .-sort-asc div::after, .-sort-desc div::after, #pnlLazyLoad img, .main-navigation .search-field, .game-board, .game-board-grid, .upvotes button svg, .tooltip-icon, img[src="/Content/images/al-logo-text.svg"] {
-        filter: invert(100%);
+        filter: invert(100%) hue-rotate(180deg);
     }
 
     img[src="/images/icons/16/write_log.png"] {
