@@ -3,7 +3,7 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for Wikipedia, Wikimedia and other known MediaWiki-powered sites.  Colors are adjustable via the variables set on :root.  https://www.queengoob.org/darkthemes
-@version        2.1
+@version        2.1.1
 @license        GPL-3.0
 ==/UserStyle== */
 
@@ -44,7 +44,7 @@
 
 @-moz-document domain("wikipedia.org"), domain("wikimedia.org"), url-prefix("https://project-gc.com/w/") {
     /* -=- Main Styling -=- */
-    body, .mw-body, .wikiEditor-ui-toolbar {
+    body, .mw-body, .wikiEditor-ui-toolbar, .frb-inline-message {
         color: var(--foreground);
         background-color: var(--background);
     }
@@ -163,11 +163,11 @@
         color: var(--foreground-disabled) !important;
     }
 
-    .mw-echo-ui-notificationItemWidget, .oo-ui-popupToolGroup-tools, .oo-ui-tool.oo-ui-widget-enabled .oo-ui-tool-link {
+    .mw-echo-ui-notificationItemWidget, .oo-ui-popupToolGroup-tools, .oo-ui-tool.oo-ui-widget-enabled .oo-ui-tool-link, .cta, .frb-inline-visualB {
         background-color: var(--background-2);
     }
 
-    .other-project-link:hover, .styled-select:hover {
+    .other-project-link:hover, .styled-select:hover, .btn {
         background-color: var(--background-3);
     }
     
@@ -179,15 +179,15 @@
         background-color: var(--background-5);
     }
 
-    .oo-ui-icon-userAvatar, .mw-ui-icon-userAvatar:before, .oo-ui-icon-userSpeechBubble, .oo-ui-icon-settings, .mw-ui-icon-settings:before, .oo-ui-indicator-down, .mw-echo-ui-notificationItemWidget-icon img[src="/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png"] {
+    .oo-ui-icon-userAvatar, .mw-ui-icon-userAvatar:before, .oo-ui-icon-userSpeechBubble, .oo-ui-icon-settings, .mw-ui-icon-settings:before, .oo-ui-indicator-down, .mw-echo-ui-notificationItemWidget-icon img[src="/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png"], .frb-inline-main img {
         filter: invert(100%);
     }
 
-    .mw-echo-ui-menuItemWidget > .oo-ui-labelElement-label, .mw-echo-ui-notificationItemWidget-content-actions-timestamp {
+    .mw-echo-ui-menuItemWidget > .oo-ui-labelElement-label, .mw-echo-ui-notificationItemWidget-content-actions-timestamp, .vector-menu-dropdown .vector-menu-heading, .frb-inline-main .cta, .btn {
         color: var(--foreground);
     }
 
-    .mw-echo-ui-notificationsInboxWidget-toolbarWrapper {
+    .mw-echo-ui-notificationsInboxWidget-toolbarWrapper, .vector-menu-dropdown .vector-menu-content {
         background-color: var(--background-2);
     }
 
@@ -394,13 +394,12 @@
         filter: invert(100%);
     }
 
-    .mwe-popups, div.navpopup {
-        background-color: var(--background-4) !important;
-        font-size: 16px !important;
+    .mwe-popups, div.navpopup, .mwe-popups .mwe-popups-container, #mwe-popups-settings {
+        background-color: var(--background-3);
     }
-
-    a.mwe-popups-extract::after {
-        background: var(--background-4) !important;
+    
+    .mwe-popups .mwe-popups-extract[dir='ltr']:after {
+        background-image: linear-gradient(to right,rgba(255,255,255,0), var(--background-3) 50%);
     }
 
     .mw-headline {
@@ -767,7 +766,7 @@
         color: var(--foreground-2);
     }
 
-    .oo-ui-tagMultiselectWidget-handle > .oo-ui-tagMultiselectWidget-content > input, .oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
+    .oo-ui-tagMultiselectWidget-handle > .oo-ui-tagMultiselectWidget-content > input, .oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button, #mwe-popups-settings main#mwe-popups-settings-form form label > span {
         color: var(--foreground-2);
     }
     
