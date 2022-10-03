@@ -2,11 +2,10 @@
 @name           Wikipedia - Dark Theme
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
-@description    A dark theme for Wikipedia, Wikimedia and other known MediaWiki-powered sites.  Colors are adjustable via the variables set on :root.  https://www.queengoob.org/darkthemes
-@version        2.1.1
+@description    A dark theme for Wikipedia, Wikimedia and other known MediaWiki-powered sites.  Currently only works for the "Vector legacy" skin, but more will follow.  Colors are adjustable via the variables set on :root.  https://www.queengoob.org/darkthemes
+@version        3.0
 @license        GPL-3.0
 ==/UserStyle== */
-
 @-moz-document domain("wikipedia.org"), domain("wikimedia.org"), url-prefix("https://project-gc.com/w/") {
     /* -=- Variables -=- */
     :root {
@@ -35,6 +34,7 @@
         --warn: #664b00;
         --note: #036;
         --documentation: #002607;
+        --dark-purple: #292135;
         --diff-del: #551611;
         --diff-ins: #184e42;
         --diff-old: #775900;
@@ -44,716 +44,203 @@
 
 @-moz-document domain("wikipedia.org"), domain("wikimedia.org"), url-prefix("https://project-gc.com/w/") {
     /* -=- Main Styling -=- */
-    body, .mw-body, .wikiEditor-ui-toolbar, .frb-inline-message {
-        color: var(--foreground);
+    body, .mw-body, .wikiEditor-ui-toolbar, .frb-inline-message, .mw-mmv-info-box, .mw-mmv-image-metadata, .suggestion-link, .oo-ui-menuLayout-content {
         background-color: var(--background);
+        color: var(--foreground);
     }
-    
-    #editpage-specialchars a {
+
+    p, .mw-echo-ui-menuItemWidget > .oo-ui-labelElement-label, .mw-echo-ui-notificationItemWidget-content-actions-timestamp, .vector-menu-dropdown .vector-menu-heading, .frb-inline-main .cta, .btn, #Example, .mw-headline, #content, .suggestions-results span, .special-query, .ambox-text-small, .mbox-text, .Note td, .infobox, .tright, .toccolours, .localized-slogan, .client-js #preferences legend, input#ooui-1.oo-ui-inputWidget-input, .vector-menu-tabs-legacy .selected a, .vector-menu-tabs-legacy .selected a:visited, .footer-sidebar-text, .other-project-tagline, .oo-ui-tabOptionWidget, .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
+        color: var(--foreground);
+    }
+
+    *[style*="color: black"] {
+        color: var(--foreground) !important;
+    }
+
+    h1, h2, h3, h4, h5, h6, .b, div, th, #pagehistory li.selected, .wikitable tr, .wikitable td, .homonymie, .plainlinks, .oo-ui-tool.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-tool-link, .oo-ui-tagMultiselectWidget-handle > .oo-ui-tagMultiselectWidget-content > input, .oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button, #mwe-popups-settings main#mwe-popups-settings-form form label > span, .oo-ui-tagMultiselectWidget-handle .oo-ui-tagMultiselectWidget-group > input, .vector-menu-portal .vector-menu-heading {
+        color: var(--foreground-2);
+    }
+
+    .portal-column-right, .portal-column-left, body.ns-100 .mw-body-content .subpages, .mw-highlight, .mw-echo-ui-notificationItemWidget, .oo-ui-popupToolGroup-tools, .oo-ui-tool.oo-ui-widget-enabled .oo-ui-tool-link, .cta, .frb-inline-visualB, .central-featured-lang :hover, .mw-echo-ui-notificationsInboxWidget-toolbarWrapper, .vector-menu-dropdown .vector-menu-content, #p-logo a, .app-badges .footer-sidebar-content, .app-badges, body.mediawiki table.mbox-small-left, .oo-ui-toolbar-bar, .oo-ui-tabSelectWidget-framed, #searchInput, .pure-form input[type=search], .informationbox, .editOptions, #mw-panel, .mw-ui-input, textarea, select, input, .vector-menu-tabs-legacy .selected, .mw-parser-output #mp-topbanner, .mw-parser-output #mp-bottom .mp-h2, .oo-ui-windowManager-modal > .oo-ui-dialog > .oo-ui-window-frame, div.thumbinner, .mw-parser-output .portal-bar-bordered, .catlinks, .mw-parser-output .navbox, .mw-parser-output .navbox-subgroup, .mw-parser-output .contentsPage--topic {
+        background-color: var(--background-2);
+        color: var(--foreground);
         border-color: var(--border);
     }
 
-    a, .tocnumber {
-        color: var(--link) !important;
-        text-decoration: none;
+    .other-project-link:hover, .styled-select:hover, .btn, .reflist, .refbegin, .referencetooltip, .rt-tooltip, .rt-tooltipTail::after, .mwe-popups, div.navpopup, .mwe-popups .mwe-popups-container, #mwe-popups-settings, .suggestions-results, .suggestions-special, .hll, .mw-prefs-buttons, .oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle, .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover, .mw-htmlform-ooui .mw-htmlform-matrix tbody tr:nth-child(even) td, .oo-ui-checkboxInputWidget [type='checkbox'] + span, .infobox, .infobox td, .infobox th, .toc, .toccolours, .mw-parser-output .side-box, .mw-parser-output .contents-pages-footer, .oo-ui-dropdownWidget.oo-ui-widget-disabled .oo-ui-dropdownWidget-handle, #pagehistory li.selected {
+        background-color: var(--background-3);
+        color: var(--foreground);
+        border-color: var(--border);
     }
 
-    a:hover {
-        color: var(--link-hover) !important;
-        text-decoration: underline;
+    .mw-echo-ui-notificationItemWidget-unread, .mw-notification, body.ns-100 .mw-body-content th, body.ns-100 .mw-body-content div, body.ns-100 #portal td, .mw_metadata td, .tracklist td, .tracklist div, .mw-mmv-above-fold, .mw-mmv-dialog, .mw-mmv-dialog-down-arrow, .mw-mmv-download-attribution, .mw-mmv-download-pane, .mw-mmv-download-pane :hover, .suggestion-link:hover, .suggestion-link:active, #js-lang-list-button, .suggestions-results:hover, .suggestions-special:hover, .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover, .oo-ui-tool.oo-ui-widget-enabled > .oo-ui-tool-link:hover, .oo-ui-barToolGroup-tools.oo-ui-toolGroup-enabled-tools .oo-ui-tool.oo-ui-widget-disabled.oo-ui-flaggedElement-primary > .oo-ui-tool-link, .oo-ui-barToolGroup-tools.oo-ui-toolGroup-disabled-tools .oo-ui-tool.oo-ui-flaggedElement-primary > .oo-ui-tool-link, td.diff-otitle, td.diff-ntitle, .lang-list-container, .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected, .oo-ui-menuOptionWidget.oo-ui-optionWidget-selected, .shortcutbox, .tright td, .tright th, .toccolours td, .toccolours th, .infobox_v3, .infobox_v3 .entete div, .cnotice, .bandeau-section, .autres-projets, #bodyContent tbody, #mp-left, .MainPageBG, #mp-left div, #mp-right div, #mp-topbanner, .list, .template-documentation, .collapsible th, .autocollapse th, .mw-search-profile-tabs, .mw-parser-output #mp-left, .mw-parser-output #mp-right, .mw-parser-output #mp-middle, .mw-parser-output #mp-lower, .wikitable > tr > th, .wikitable > * > tr > th, #mw-htmlform-source, #mw-htmlform-description {
+        background-color: var(--background-4);
+        color: var(--foreground);
+        border-color: var(--border);
     }
 
-    .new, .new:link, .new:visited {
-        color: var(--link-invalid) !important;
+    .mw-echo-ui-notificationItemWidget:hover, .portal-column-right span, .portal-column-left span, body.ns-100 .mw-body-content h2, .mw_metadata th, .tracklist th, #mp-tfl-h2, .oo-ui-tagItemWidget.oo-ui-widget-enabled:not(.oo-ui-tagItemWidget-fixed), .oo-ui-popupToolGroup.oo-ui-popupToolGroup-active > .oo-ui-popupToolGroup-handle, .ve-ui-changeDescriptionsSelectWidget > .oo-ui-optionWidget-highlighted, .vertical-navbox th, .mw-revslider-revision-intermediate, .mw-revslider-revision, .lang-list-content, .bookshelf span, .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget-selected:hover, .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-widget-enabled:hover, #mw-searchoptions, #searchText, .client-js #preferences, #qualitaetssicherungstext, .oo-ui-window-frame, .oo-ui-popupWidget-popup, .wikitable, .wikitable th, .wikitable rh, .plainrowheaders, .nounderlines, .wikitable tr, .wikitable td, .navbox-title, .navbox-group, .navbox-odd, .navbox-even, #mp-left h2, #mp-right h2, #mp-bottom h2, .navbox-abovebelow, .group, .mw-htmlform-ooui .mw-htmlform-matrix tbody tr:hover td, .mw-parser-output .navbox-even, .mw-parser-output .module-shortcutboxplain {
+        background-color: var(--background-5);
+        color: var(--foreground);
+        border-color: var(--border);
     }
 
-    .new:hover, .new:visited:hover {
-        color: var(--link-invalid-hover) !important;
+    .oo-ui-checkboxInputWidget [type='checkbox'] + span, .oo-ui-radioInputWidget [type='radio'] + span {
+        background-color: var(--background-black);
     }
 
-    .b, div, th, #pagehistory li.selected, [style*="color: black"] {
-        color: var(--foreground-2) !important;
+    .oo-ui-buttonElement-framed.oo-ui-widget-disabled > a.oo-ui-buttonElement-button, .thumbcaption, .diff-context, .site-license, .oo-ui-labelWidget.oo-ui-inline-help {
+        color: var(--foreground-disabled);
     }
 
-    h1 {
-        border: 0px !important;
-        font-family: 'Arial' !important;
-        font-weight: 700 !important;
-        font-size: 36px !important;
-        color: var(--foreground-2) !important;
+    #editpage-specialchars a, .suggestions-results, .thumbimage, .Boxmerge, #hauptseite h2, #hauptseite .inhalt, .catlinks, .toc, .wikitable td, .wikitable th, #simpleSearch, .mw-parser-output .navbox-list, .mw-parser-output tr + tr > .navbox-abovebelow, .mw-parser-output tr + tr > .navbox-group, .mw-parser-output tr + tr > .navbox-image, .mw-parser-output tr + tr > .navbox-list {
+        border-color: var(--border);
     }
 
-    h2 {
-        border: 0px !important;
-        font-family: 'Arial' !important;
-        font-weight: 400 !important;
-        font-size: 26px !important;
-        color: var(--foreground-2) !important;
+    ul, li, li span, caption, #mw-page-base, .vectorTabs, .portal, .portal table, .globegris, .NavHead {
+        background-color: transparent;
     }
 
-    h3 {
-        border: 0px !important;
-        font-family: 'Arial' !important;
-        font-weight: 400 !important;
-        font-size: 16px !important;
-        color: var(--foreground-2) !important;
+    .vector-menu-tabs-legacy li {
+        background-image: none;
     }
 
-    h4 {
-        color: var(--foreground-2) !important;
-    }
-
-    p {
-        font-weight: 300 !important;
-        line-height: 1.7 !important;
-        color: var(--foreground) !important;
-    }
-
-    [style*="background:#f8f9fa"] {
-        background: var(--background-3) !important;
-        border: none !important;
-    }
-
-    .reflist, .refbegin {
-        background-color: var(--background-3) !important;
-    }
-
-    .thumbcaption {
-        color: var(--foreground-disabled) !important;
-    }
-
-    #content h3 {
-        font-size: 20px !important;
-    }
-
-    .portal-column-right span, .portal-column-left span, body.ns-100 .mw-body-content h2, .mw_metadata th, .tracklist th, #mp-tfl-h2 {
-        color: var(--foreground) !important;
-        background-color: var(--background-5) !important;
-    }
-
-    body.ns-100 .mw-body-content th, body.ns-100 .mw-body-content div, body.ns-100 #portal td, .mw_metadata td, .tracklist td, .tracklist div {
-        color: var(--foreground) !important;
-        border-width: 0px !important;
-        background-color: var(--background-4) !important;
-    }
-
-    .portal-column-right, .portal-column-left, body.ns-100 .mw-body-content .subpages {
-        color: var(--foreground) !important;
-        background-color: var(--background-2) !important;
-        border-width: 0px !important;
-    }
-
-    .mw-highlight {
-        background-color: var(--background-2) !important;
-    }
-
-    .mw-highlight .nc, .mw-highlight .nf {
+    a, a:visited, .tocnumber, .mw-highlight .nc, .mw-highlight .nf, .mw-content-ltr pre, .vector-menu-portal .vector-menu-content li a, .vector-menu-portal .vector-menu-content li a:visited, .vector-menu-tabs-legacy li a, .mw-parser-output a.extiw:visited, .mw-parser-output a.external:visited, .vector-menu-dropdown .mw-list-item a, .toctogglelabel, .mw-parser-output a.extiw, .mw-parser-output a.external {
         color: var(--link);
     }
 
-    .mw-notification {
-        background-color: var(--background-4) !important;
-    }
-    
-    .oo-ui-buttonElement-framed.oo-ui-widget-disabled > .oo-ui-buttonElement-button {
-        background-color: var(--background);
-        color: var(--foreground-disabled);
-    }
-    .oo-ui-buttonElement-framed.oo-ui-widget-disabled > a.oo-ui-buttonElement-button {
-        color: var(--foreground-disabled) !important;
+    a:hover, .mw-parser-output a.extiw:visited:hover, .mw-parser-output a.external:visited:hover, .mw-parser-output a.extiw:hover, .mw-parser-output a.external:hover {
+        color: var(--link-hover);
     }
 
-    .mw-echo-ui-notificationItemWidget, .oo-ui-popupToolGroup-tools, .oo-ui-tool.oo-ui-widget-enabled .oo-ui-tool-link, .cta, .frb-inline-visualB {
-        background-color: var(--background-2);
+    .new, .new:link, .new:visited {
+        color: var(--link-invalid);
     }
 
-    .other-project-link:hover, .styled-select:hover, .btn {
+    .new:hover, .new:visited:hover {
+        color: var(--link-invalid-hover);
+    }
+
+    .link-box em, .link-box small, .suggestions-result, special-label {
+        color: var(--foreground-footer);
+    }
+
+    .mw-ui-vform .warning, .warningbox, .mw-message-box-warning {
+        background-color: var(--warn);
+    }
+
+    .mw-ui-vform .error, .mw-parser-output #mp-middle .mp-h2, div.mw-warning-with-logexcerpt, div.mw-lag-warn-high, div.mw-cascadeprotectedwarning, div#mw-protect-cascadeon, div.titleblacklist-warning {
+        background-color: var(--error);
+    }
+
+    .mw-parser-output #mp-right .mp-h2, .mw-parser-output .navbox-title, .mw-parser-output .navbox-abovebelow, .mw-parser-output .navbox-group, .mw-parser-output .navbox-subgroup .navbox-title, .mw-parser-output .contentsPage--topic .contentsPage__title, .mw-parser-output .help-box .sidebar-title {
+        background-color: var(--note);
+    }
+
+    .mw-parser-output #mp-left .mp-h2 {
+        background-color: var(--documentation);
+    }
+
+    .mw-parser-output #mp-lower .mp-h2 {
+        background-color: var(--dark-purple);
+    }
+
+    code, pre, .mw-code {
+        color: var(--foreground-code);
         background-color: var(--background-3);
-    }
-    
-    .mw-echo-ui-notificationItemWidget-unread {
-        background-color: var(--background-4);
+        border-color: var(--border);
     }
 
-    .mw-echo-ui-notificationItemWidget:hover {
-        background-color: var(--background-5);
-    }
-
-    .oo-ui-icon-userAvatar, .mw-ui-icon-userAvatar:before, .oo-ui-icon-userSpeechBubble, .oo-ui-icon-settings, .mw-ui-icon-settings:before, .oo-ui-indicator-down, .mw-echo-ui-notificationItemWidget-icon img[src="/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png"], .frb-inline-main img {
-        filter: invert(100%);
-    }
-
-    .mw-echo-ui-menuItemWidget > .oo-ui-labelElement-label, .mw-echo-ui-notificationItemWidget-content-actions-timestamp, .vector-menu-dropdown .vector-menu-heading, .frb-inline-main .cta, .btn {
-        color: var(--foreground);
-    }
-
-    .mw-echo-ui-notificationsInboxWidget-toolbarWrapper, .vector-menu-dropdown .vector-menu-content {
-        background-color: var(--background-2);
-    }
-
-    #Example {
-        color: var(--foreground) !important;
-    }
-
-    table, td, th {
-        border: 0px !important;
-        border-collapse: collapse !important;
-        padding: 5px !important;
-        background-color: var(--background-5) !important;
-        /* Colored table cells are replaced with this background-color */
-    }
-
-    ul, li, caption {
-        background: transparent !important;
-        border: 0px !important;
-        line-height: 1.8 !important;
-        font-size: 14px !important;
-        font-weight: 300 !important;
-    }
-
-    li span {
-        background: transparent !important;
-        border: 0px !important;
-        font-size: 14px !important;
-    }
-
-    .referencetooltip, .rt-tooltip {
-        background-color: var(--background-3) !important;
-    }
-
-    .rt-tooltipTail::after {
-        background: var(--background-3);
-    }
-
-    dl {
-        font-weight: 300 !important;
-    }
-
-    dt {
-        font-style: italic;
-        font-size: 16px !important;
-        margin-top: 10px !important;
-    }
-
-    dd {
-        font-size: 15px !important;
-    }
-
-    .warningbox, .mw-message-box-warning  {
-        background-color: var(--warn) !important;
-    }
-    
     .mw-parser-output .documentation, .mw-parser-output .documentation-metadata {
         background-color: var(--documentation);
     }
 
-    #p-logo a {
-        background-color: var(--background-2) !important;
+    .lang-list-button, .lang-list-active .lang-list-button {
+        outline-color: var(--background-3);
     }
 
-    .mw-wiki-logo {
-        padding-left: 15px !important;
-        padding-top: 10px !important;
-        border: none !important;
+    #footer-info-copyright, #footer-info-lastmod {
+        color: var(--foreground-footer);
     }
 
-    code {
-        padding: 3px !important;
-        background: transparent !important;
-        color: var(--foreground-code) !important;
-        border: 1px solid var(--border) !important;
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
+        background-color: var(--background-2);
+        border-color: var(--background-2);
     }
 
     .hatnote span {
-        color: var(--foreground-footer) !important;
-        background-color: var(--background-2) !important;
-    }
-
-    tt {
-        font-family: 'Source Code Pro', 'Lucida Sans Unicode', 'Courier New' !important;
-        font-size: 16px !important;
-    }
-
-    blockquote {
-        border: 0px !important;
-        font-style: italic !important;
-        font-size: 20px !important;
-        margin: 35px 75px !important;
-        line-height: 1.5 !important;
-        font-weight: 300 !important;
-        background: transparent !important;
-    }
-
-    select {
-        padding: 0px 10px;
+        color: var(--foreground-footer);
+        background-color: var(--background-2);
     }
 
     .mw-ui-button, .mw-ui-progressive {
-        border: 1px solid var(--border) !important;
-        color: var(--main) !important;
-        background: var(--background-2) !important;
-        text-shadow: 0px 0px 0px;
+        border-color: var(--border);
+        color: var(--main);
+        background-color: var(--background-2);
     }
 
     .mw-ui-button.mw-ui-progressive:hover, .mw-ui-button.mw-ui-progressive:focus, .mw-ui-button.mw-ui-progressive:active, .mw-ui-button:hover, .mw-ui-progressive:hover, .mw-ui-button:focus, .mw-ui-progressive:focus {
-        box-shadow: 0px 0px 0px !important;
-        text-shadow: 0px 0px 0px !important;
-        border: 1px solid var(--main) !important;
+        border-color: var(--main);
     }
 
-    .app-badges .footer-sidebar-content {
-        background-color: var(--background-2) !important;
-    }
-
-    .mw-mmv-info-box {
-        background-color: var(--background) !important;
-    }
-
-    /* Media Viewer Image Preview */
-    .mw-mmv-above-fold {
-        background-color: var(--background-4) !important;
-    }
-
-    .mw-mmv-image-metadata {
-        background-color: var(--background) !important;
-    }
-
-    .mw-mmv-dialog, .mw-mmv-dialog-down-arrow, .mw-mmv-download-attribution, .mw-mmv-download-pane, .mw-mmv-download-pane :hover {
-        background-color: var(--background-4) !important;
-    }
-
-    /* Publishing Changes */
     #wpSave, #wpPreview, #wpDiff {
-        border-radius: 4px !important;
-        border: 1px solid var(--main) !important;
-        color: var(--main) !important;
-        background: var(--background-2) !important;
-        text-shadow: 0px 0px 0px;
-        padding: 0.5em 1em;
-        cursor: pointer;
+        border-color: var(--main);
+        color: var(--main);
+        background-color: var(--background-2);
     }
 
     #wpSave:hover, #wpPreview:hover, #wpDiff:hover {
-        color: var(--main-hover) !important;
+        color: var(--main-hover);
     }
 
-    /* Search */
-    #simpleSearch {
-        position: relative;
-        overflow: hidden;
-        background: transparent !important;
-        border-color: var(--border) !important;
-    }
-
-    #searchInput {
-        height: 100%;
-        color: var(--foreground) !important;
-        background: transparent !important;
-    }
-
-    input#ooui-1.oo-ui-inputWidget-input {
-        color: var(--foreground) !important;
-        background: transparent !important;
-    }
-
-    #mw-searchoptions, #searchText {
-        color: var(--foreground) !important;
-        background-color: var(--background-5) !important;
-    }
-
-    .mw-ui-vform .warning {
-        background-color: var(--warn) !important;
-    }
-
-    .mw-ui-vform .error {
-        background-color: var(--error) !important;
-    }
-
-    .mw-ui-input {
-        border: 1px solid var(--border) !important;
-        color: var(--foreground) !important;
-        background: var(--background-2) !important;
-        font-size: 16px !important;
-    }
-
-    .mw-ui-input:focus {
-        box-shadow: 0px 0px 0px !important;
-    }
-    
-    textarea, select, input {
-        border: 1px solid var(--border);
-        color: var(--foreground);
-        background: var(--background-2);
-    }
-
-    .mwe-math-fallback-image-inline {
-        filter: invert(100%);
-    }
-
-    .mwe-math-fallback-image-inline img, .mwe-math-element img, img[src*="LaTeX"] {
-        filter: invert(100%);
-    }
-
-    .mwe-popups, div.navpopup, .mwe-popups .mwe-popups-container, #mwe-popups-settings {
-        background-color: var(--background-3);
-    }
-    
-    .mwe-popups .mwe-popups-extract[dir='ltr']:after {
-        background-image: linear-gradient(to right,rgba(255,255,255,0), var(--background-3) 50%);
-    }
-
-    .mw-headline {
-        color: var(--foreground) !important;
-    }
-
-    .mw-content-ltr pre {
-        font-family: "Courier New", Lucida Console, sans-serif !important;
-        color: var(--link) !important;
-    }
-
-    .suggestions {
-        font-weight: 300 !important;
-        font-size: 15px !important;
-        max-width: 300px !important;
-        margin-top: 15px !important;
-        border: 0px !important;
-        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .suggestions-results {
-        border: 0px !important;
-    }
-
-    .suggestions-result {
-        padding: 10px !important;
-    }
-
-    .suggestion-link {
-        background-color: var(--background);
-    }
-
-    .suggestion-link:hover, .suggestion-link:active {
-        background-color: var(--background-4);
-    }
-
-    .imeselector, #searchEngines {
-        display: none !important;
-    }
-
-    .mw-search-formheader {
-        border: 0px !important;
-        background: transparent !important;
-    }
-
-    .bookend {
-        background-image: none !important;
-    }
-
-    .link-box em, .link-box small {
-        color: var(--foreground-footer) !important;
+    #searchInput, #searchLanguage, #langsearch-input, .formBtn {
+        background-color: var(--background-2);
+        border-color: var(--border-input);
     }
 
     .search-form fieldset {
-        background-color: var(--background-5) !important;
-        border-color: var(--border-input) !important;
-        border-width: 1px !important;
-    }
-
-    .oo-ui-tagItemWidget.oo-ui-widget-enabled:not(.oo-ui-tagItemWidget-fixed) {
-        background-color: var(--background-5) !important;
-    }
-
-    #searchInput, #searchLanguage, #langsearch-input {
-        background-color: var(--background-2) !important;
-        border-color: var(--border-input) !important;
-        border-width: 1px !important;
-    }
-
-    .formBtn {
-        background-color: var(--background-2) !important;
-        border-color: var(--border-input) !important;
-        border-width: 1px !important;
-        border-radius: 0px !important;
-    }
-
-    .mw-search-result-heading, .searchresult, .searchmatch {
-        font-size: 14px !important;
-        font-weight: 400 !important;
-        padding: 3px 0px !important;
-    }
-
-    .searchmatch {
-        font-weight: 700 !important;
-    }
-
-    .mw-search-result-data, .mw-search-createlink {
-        display: none;
-    }
-
-    #mw-page-base, .vectorTabs {
-        background: transparent !important;
-        border-width: 0px !important;
-    }
-
-    #content {
-        color: var(--foreground) !important;
-        border: 0px !important;
-        margin-left: 215px !important;
-    }
-
-    .portal, .portal table {
-        background: transparent !important;
-    }
-
-    #mw-panel {
-        width: 200px !important;
-        border-right: 1px solid var(--border);
-        background-color: var(--background-2) !important;
-        padding-left: 10px !important;
-        ;
-    }
-
-    #p-logo {
-        left: 0px;
-        padding-left: 10px !important;
-        background-color: white;
-    }
-
-    #p-logo a {
-        width: 11em !important;
-        padding-left: 40px;
-        background-color: white;
-        left: 0px;
-        border-right: 1px solid var(--border);
-        margin-left: -1em;
-    }
-
-    #p-logo a:hover {
-        opacity: 1.0;
+        background-color: var(--background-5);
+        border-color: var(--border-input);
     }
 
     #mw-head {
-        color: var(--foreground) !important;
+        color: var(--foreground);
         background-color: var(--background-3);
-        opacity: 1.0;
         box-shadow: 0px 0px 2px var(--background-3);
-        transition-property: opacity !important;
-        transition-duration: 0.25s !important;
-    }
-
-    #mw-head:hover {
-        opacity: 1.0 !important;
-    }
-
-    .uls-settings-trigger {
-        display: none !important;
-    }
-
-    #left-navigation {
-        margin-left: 233px !important;
-    }
-
-    .wikitable {
-        font-weight: 300 !important;
-    }
-
-    .wikitable td, .wikitable th {
-        border: 1px solid var(--border) !important;
-    }
-
-    pre {
-        line-height: 1.3 !important;
-        font-family: "Courier New", Lucida Console, sans-serif !important;
-        border: 0px !important;
-        background: 0px !important;
-        font-size: 16px !important;
-        color: var(--main-light) !important;
-    }
-
-    .mw-code {
-        border: 0px !important;
-        padding: 17px !important;
-        background: 0px !important;
-        font-size: 16px !important;
-    }
-
-    #bodyContent tbody, #mp-left, .MainPageBG, #mp-left div, #mp-right div, #mp-topbanner, .list, .template-documentation, .collapsible th, .autocollapse th {
-        color: var(--foreground) !important;
-        background-color: var(--background-4) !important;
-        border-color: var(--border) !important;
-    }
-
-    #js-lang-list-button {
-        background-color: var(--background-4) !important;
-    }
-
-    .app-badges {
-        background-color: var(--background-2) !important;
-    }
-
-    .wikitable, .wikitable th, .wikitable rh, .plainrowheaders, .nounderlines, .wikitable tr, .wikitable td, .navbox-title, .navbox-group, .navbox-odd, .navbox-even, #mp-left h2, #mp-right h2, #mp-bottom h2, .navbox-abovebelow, .group {
-        color: var(--foreground) !important;
-        background-color: var(--background-5) !important;
     }
 
     body.ns-0 #content tbody code {
-        color: var(--foreground-code) !important;
-        background-color: var(--background-2) !important;
-        border-width: 0px !important;
-    }
-
-    .suggestions-results, .suggestions-special {
-        background-color: var(--background-3) !important;
-    }
-
-    .suggestions-results:hover, .suggestions-special:hover {
-        background-color: var(--background-4) !important;
-    }
-
-    .suggestions-results span, .special-query {
-        color: var(--foreground) !important;
-    }
-
-    .suggestions-result, special-label {
-        color: var(--foreground-footer) !important;
+        color: var(--foreground-code);
+        background-color: var(--background-2);
     }
 
     .highlight {
-        color: var(--background-5) !important;
-    }
-
-    .mw-search-profile-tabs {
-        color: var(--foreground) !important;
-        background-color: var(--background-4) !important;
-        border-color: var(--border) !important;
-    }
-
-    .wikitable tr, .wikitable td, .homonymie, .plainlinks {
-        color: var(--foreground-2) !important;
-        background-color: transparent!important;
+        color: var(--background-5);
     }
 
     .quotebox {
-        color: var(--foreground-2) !important;
-        background-color: var(--background-3) !important;
-        border-color: var(--border) !important;
-    }
-
-    .toc {
-        background: transparent !important;
-        border-color: var(--border) !important;
-        border-style: solid !important;
-        display: block !important;
-        max-width: 300px !important;
-    }
-
-    .toctoggle {
-        display: none !important;
-    }
-
-    body.mediawiki table.mbox-small-left {
-        background-color: var(--background-2) !important;
-    }
-
-    .thumbinner, .thumb, .toccolours, .graytable {
-        background: transparent !important;
-        border: 0px !important;
-        font-size: 16px !important;
-    }
-
-    .thumbimage {
-        border: 0px !important;
-    }
-
-    .thumbcaption {
-        font-style: italic !important;
-        margin: 7px 0px !important;
-    }
-
-    .thumbimage:hover {
-        opacity: 0.85 !important;
-    }
-
-    .dablink {
-        margin: 14px 0px !important;
-        font-weight: 300 !important;
-        font-size: 18px !important;
-    }
-
-    #siteSub, .flaggedrevs_preview {
-        display: none !important;
-    }
-
-    .ambox, .tmbox, .Note, .informationbox {
-        margin: 5px 0px !important;
-        font-size: 18px !important;
-        line-height: 1.5 !important;
-        max-width: 550px !important;
-        font-weight: 300 !important;
-    }
-
-    .ambox td, .tmbox td {
-        padding: 10px !important;
-    }
-
-    .ambox-text-small, .mbox-text, .Note td {
-        font-size: 14px !important;
-        font-weight: 300 !important;
-        color: var(--foreground) !important;
-    }
-
-    .ambox-image, .mbox-image {
-        display: none;
+        color: var(--foreground-2);
+        background-color: var(--background-3);
+        border-color: var(--border);
     }
 
     #request_for_deletion, .ambox-serious {
-        background: rgba(255, 0, 0, 0.1) !important;
-        border: 1px solid rgba(255, 0, 0, 0.15) !important;
-        color: #a00000 !important;
+        background-color: rgba(255, 0, 0, 0.1);
+        border-color: rgba(255, 0, 0, 0.15);
+        color: #a00000;
     }
 
     .tmbox-notice, .tmbox-move, .Note {
-        background: rgba(150, 75, 0, 0.1) !important;
-        border: 1px solid rgba(150, 75, 0, 0.15) !important;
+        background-color: rgba(150, 75, 0, 0.1);
+        border-color: rgba(150, 75, 0, 0.15);
     }
 
-    .informationbox {
-        background: var(--background-2) !important;
-        padding: 10px !important;
-        font-size: 14px !important;
-    }
-
-    .shortcutbox {
-        background: var(--background-4) !important;
-    }
-
-    .editOptions {
-        background: var(--background-2) !important;
-        border: 0px !important;
-    }
-
-    .oo-ui-toolbar-bar {
-        background-color: var(--background-2) !important;
-    }
-
-    .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover, .oo-ui-tool.oo-ui-widget-enabled > .oo-ui-tool-link:hover {
-        background-color: var(--background-4);
+    .oo-ui-windowManager-modal > .oo-ui-dialog {
+        background-color: rgba(0, 0, 0, 0.75);
     }
 
     .oo-ui-toolbar-actions .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover {
         border-color: var(--background-5);
-    }
-
-    .oo-ui-toolbar-bar .oo-ui-iconElement-icon, .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle .oo-ui-iconElement-icon, .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle .oo-ui-indicatorElement-indicator {
-        filter: invert(1);
-    }
-
-    .oo-ui-barToolGroup-tools.oo-ui-toolGroup-enabled-tools .oo-ui-tool.oo-ui-widget-disabled.oo-ui-flaggedElement-primary > .oo-ui-tool-link, .oo-ui-barToolGroup-tools.oo-ui-toolGroup-disabled-tools .oo-ui-tool.oo-ui-flaggedElement-primary > .oo-ui-tool-link {
-        background-color: var(--background-4);
-    }
-
-    .oo-ui-tool.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-tool-link {
-        color: var(--foreground-2) !important;
     }
 
     .ve-ui-mwSaveDialog-summary, .oo-ui-textInputWidget .oo-ui-inputWidget-input, .ve-ui-mwSaveDialog-options, .oo-ui-menuSelectWidget, .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle, .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled {
@@ -761,26 +248,32 @@
         color: var(--foreground-2);
     }
 
-    .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover, .oo-ui-menuSelectWidget .oo-ui-labelElement:hover, .oo-ui-messageWidget.oo-ui-messageWidget-block.oo-ui-flaggedElement-notice, .ve-ui-mwTransclusionOutlineTemplateWidget-sticky, .ve-ui-expandableContent-toggle, #editpage-specialchars a,  .oo-ui-tool.oo-ui-widget-enabled > .oo-ui-tool-link:active, .oo-ui-tool.oo-ui-widget-enabled.oo-ui-tool-active > .oo-ui-tool-link, .oo-ui-tool.oo-ui-widget-enabled.oo-ui-popupToolGroup-active > .oo-ui-tool-link {
+    .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover, .oo-ui-menuSelectWidget .oo-ui-labelElement:hover, .oo-ui-messageWidget.oo-ui-messageWidget-block.oo-ui-flaggedElement-notice, .ve-ui-mwTransclusionOutlineTemplateWidget-sticky, .ve-ui-expandableContent-toggle, #editpage-specialchars a, .oo-ui-tool.oo-ui-widget-enabled > .oo-ui-tool-link:active, .oo-ui-tool.oo-ui-widget-enabled.oo-ui-tool-active > .oo-ui-tool-link, .oo-ui-tool.oo-ui-widget-enabled.oo-ui-popupToolGroup-active > .oo-ui-tool-link {
         background-color: var(--background-2);
         color: var(--foreground-2);
     }
 
-    .oo-ui-tagMultiselectWidget-handle > .oo-ui-tagMultiselectWidget-content > input, .oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button, #mwe-popups-settings main#mwe-popups-settings-form form label > span {
-        color: var(--foreground-2);
+    kbd {
+        background-image: linear-gradient(to top, var(--background-5) 0%, var(--background) 50%, var(--background-5) 100%);
+        box-shadow: 0.1em 0.2em 0.2em var(--background);
+        border-color: var(--border);
     }
-    
-    .oo-ui-popupToolGroup.oo-ui-popupToolGroup-active > .oo-ui-popupToolGroup-handle {
-        background-color: var(--background-5);
+
+    .mwe-popups .mwe-popups-extract[dir='ltr']:after {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--background-3) 50%);
+    }
+
+    .suggestions {
+        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .oo-ui-dropdownWidget.oo-ui-widget-disabled .oo-ui-dropdownWidget-handle {
+        text-shadow: 0 1px 1px black;
     }
 
     .oo-ui-pendingElement-pending {
         background-color: var(--background);
         background-image: linear-gradient(135deg, black 25%, transparent 25%, transparent 50%, black 50%, black 75%, transparent 75%, transparent);
-    }
-
-    .ve-ui-changeDescriptionsSelectWidget > .oo-ui-optionWidget-highlighted {
-        background-color: var(--background-5);
     }
 
     .ve-ui-diffElement-attributeChange del {
@@ -793,294 +286,82 @@
         box-shadow: 0 0 0 1px var(--diff-ins);
     }
 
-    .catlinks {
-        background: transparent !important;
-        border: 1px solid var(--border) !important;
-        font-size: 16px !important;
-    }
-
-    .infobox, .tright, .toccolours {
-        color: var(--foreground) !important;
-        border: 0px !important;
-        background: transparent !important;
-        border-collapse: collapse !important;
-    }
-
-    .infobox td, .infobox th, .tright td, .tright th, .toccolours td, .toccolours th {
-        padding: 5px !important;
-        background: var(--background-4) !important;
-        font-weight: 400 !important;
-    }
-
-    .infobox_v3 {
-        background: var(--background-4) !important;
-        border-color: transparent !important;
-    }
-
-    .infobox_v3 .entete div {
-        background-color: var(--background-4) !important;
-        color: var(--foreground) !important;
-    }
-
-    .image img:hover {
-        opacity: 0.85 !important;
-    }
-
-    .globegris {
-        background: transparent !important;
-    }
-
-    .mw-editsection-bracket, .references-small b, .mw-cite-backlink, .plainlinksneverexpand {
-        display: none !important;
-    }
-
-    #floating_object {
-        display: none;
-    }
-
-    .navbox, .nowraplinks {
-        margin: 10px 0px !important;
-        border: 0px !important;
-        background: transparent !important;
-    }
-
     .navbox td, .navbox th, .nowraplinks td, .nowraplinks th {
-        padding: 9px 6px !important;
-        font-size: 14px !important;
-        font-weight: 300 !important;
-        border: 1px solid var(--background-2) !important;
-    }
-
-    .vertical-navbox th {
-        background-color: var(--background-5) !important;
-    }
-
-    .NavFrame {
-        border: 0px !important;
-        background: transparent !important;
-        padding: 0px !important;
-    }
-
-    .NavHead {
-        margin: 10px 0px !important;
-        padding: 12px !important;
-        font-size: 16px !important;
-        font-weight: 700 !important;
-        background: transparent !important;
+        border-color: var(--background-2);
     }
 
     .NavContent {
-        background-color: #ffffff1a !important;
-    }
-
-    .Boxmerge {
-        border: 0px !important;
-    }
-
-    #coordinates {
-        display: none !important;
-    }
-
-    #mw-fr-revisiontag, #mw-fr-reviewnotice {
-        display: none !important;
-    }
-
-    div#footer {
-        margin-left: 14em !important;
-        padding: 1.25em 1.5em 1.5em !important;
-    }
-
-    #footer-info-copyright, #footer-info-lastmod {
-        color: var(--foreground-footer) !important;
-    }
-
-    .oo-ui-window-frame, .oo-ui-popupWidget-popup {
-        color: var(--foreground) !important;
-        background-color: var(--background-5) !important;
-    }
-
-    .oo-ui-buttonElement-button .oo-ui-iconElement-icon {
-        filter: invert(100%);
-    }
-
-    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
-        background-color: var(--background-2) !important;
-        border-color: var(--background-2) !important
+        background-color: #ffffff1a;
     }
 
     div.mw-revslider-revision-wrapper-down.mw-revslider-revision-hovered {
-        color: #d6a100 !important;
+        color: #d6a100;
     }
 
     div.mw-revslider-revision-wrapper-up.mw-revslider-revision-hovered {
-        color: #1e6db8 !important;
+        color: #1e6db8;
     }
 
-    .mw-revslider-revision-older {
-        background-color: var(--diff-old) !important;
+    .mw-revslider-revision-older, del.diffchange.diffchange-inline {
+        background-color: var(--diff-old);
     }
 
-    .mw-revslider-revision-intermediate {
-        background-color: var(--background-5) !important;
+    .mw-revslider-revision-newer, ins.diffchange.diffchange-inline {
+        background-color: var(--diff-new);
     }
 
-    .mw-revslider-revision-newer {
-        background-color: var(--diff-new) !important;
+    #mw-page-base {
+        background-image: linear-gradient(to bottom, var(--background) 50%, var(--background-5) 100%);
     }
 
-    .mw-revslider-revision {
-        background-color: var(--background-5) !important;
+    img[alt="Black padlock"] {
+        filter: contrast(0.8);
     }
 
-    del.diffchange.diffchange-inline {
-        background-color: var(--diff-old) !important;
-    }
-
-    ins.diffchange.diffchange-inline {
-        background-color: var(--diff-new) !important;
-    }
-
-    .diff-context {
-        color: #999 !important;
-    }
-
-    td.diff-otitle, td.diff-ntitle {
-        background-color: var(--background-4) !important;
-    }
-
-    .lang-list-button {
-        outline-color: var(--background-3) !important;
-    }
-
-    .lang-list-content {
-        background-color: var(--background-5) !important;
-    }
-
-    .bookshelf span {
-        background-color: var(--background-5) !important;
-    }
-
-    .lang-list-container {
-        background-color: var(--background-4) !important;
-    }
-
-    .central-textlogo__image {
-        filter: invert(100%);
-    }
-
-    .localized-slogan {
-        color: var(--foreground) !important;
-    }
-
-    .svg-Wikimedia-logo_black {
-        filter: invert(100%);
-    }
-
-    .hll {
-        background-color: var(--background-3) !important;
-    }
-
-    kbd {
-        background-image: linear-gradient(to top, var(--background-5) 0%, var(--background) 50%, var(--background-5) 100%) !important;
-        box-shadow: 0.1em 0.2em 0.2em var(--background) !important;
-        border: 1px solid var(--border) !important;
-    }
-
-    [style*="background:#ccc"] {
-        background: var(--background-4) !important
+    [style*="background:#FCFCFC"] {
+        background: var(--background) !important;
     }
 
     [style*="background:#eeeeee"], [style*="background:#efefef"] {
-        background: var(--background-3) !important
+        background: var(--background-3) !important;
     }
 
-    /* Central Notice Banner */
-    .cnotice {
-        background-color: var(--background-4) !important;
-        border: 1px solid var(--border);
+    [style*="background:#f8f9fa"] {
+        background: var(--background-3) !important;
+        border: none !important;
     }
 
-    .cnotice-toggle-box {
-        filter: invert(100%);
+    [style*="background:#ccc"] {
+        background: var(--background-4) !important;
     }
 
-    div[style*="background:#FCFCFC"] {
-        background: var(--background) !important
+    [style*="background:#ccffcc"] {
+        background: var(--documentation) !important;
     }
 
-    /* Preferences */
-    .client-js #preferences {
-        border: 1px solid var(--border) !important;
-        background-color: var(--background-5) !important;
+    [style*="background: #e8f0ff;"], [style*="background: #DFE8FF;"] {
+        background: var(--note) !important;
     }
 
-    .client-js #preferences legend {
-        color: var(--foreground);
+    [style*="background-color: #FFCC66;"], [style*="background:#ffffc0"] {
+        background: var(--warn) !important;
     }
 
-    .oo-ui-menuLayout-content {
-        background-color: var(--background) !important;
-    }
-
-    .oo-ui-tabSelectWidget-framed {
-        background-color: var(--background-2) !important;
-    }
-
-    .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected, .oo-ui-menuOptionWidget.oo-ui-optionWidget-selected {
-        background-color: var(--background-4);
-    }
-
-    .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget-selected:hover, .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-widget-enabled:hover {
-        background-color: var(--background-5);
-    }
-
-    .mw-prefs-buttons, .oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle {
-        background-color: var(--background-3);
-    }
-
-    .oo-ui-checkboxInputWidget [type='checkbox'] + span, .oo-ui-radioInputWidget [type='radio'] + span {
-        background-color: var(--background-black);
-    }
-
-    /* -=- Other Languages -=- */
-    /* German */
-    #hauptseite h2 {
-        background: inherit;
-        border: none;
-    }
-
-    #hauptseite .inhalt {
-        background: inherit;
-        border: none;
-    }
-
-    #qualitaetssicherungstext {
-        background-color: var(--background-5) !important;
-        border: 1px solid var(--border) !important;
-    }
-
-    /* French */
-    #accueil_2017_en-tete {
-        background-image: none !important;
-    }
-
-    .bandeau-section {
-        background-color: var(--background-4) !important;
-        border: 1px solid var(--border) !important;
-    }
-
-    .autres-projets {
-        background-color: var(--background-4) !important;
-        border: 1px solid var(--border) !important;
+    [style*="background:#ffcccc"], [style*="background-color: #fee;"] {
+        background: var(--error) !important;
     }
 
     /* -=- Image Replacement -=- */
-    .oo-ui-icon-search, .mw-ui-icon-search:before, .oo-ui-icon-infoFilled, .mw-ui-icon-infoFilled:before, .oo-ui-icon-puzzle, .mw-ui-icon-puzzle:before, .oo-ui-icon-wikiText, .mw-ui-icon-wikiText:before, .ve-ui-expandableContent-fade, .wikiEditor-ui-toolbar .tabs span.tab a:before, .oo-ui-icon-eye, .mw-ui-icon-eye:before {
+    .oo-ui-icon-search, .mw-ui-icon-search:before, .oo-ui-icon-infoFilled, .mw-ui-icon-infoFilled:before, .oo-ui-icon-puzzle, .mw-ui-icon-puzzle:before, .oo-ui-icon-wikiText, .mw-ui-icon-wikiText:before, .ve-ui-expandableContent-fade, .wikiEditor-ui-toolbar .tabs span.tab a:before, .oo-ui-icon-eye, .mw-ui-icon-eye:before, .central-textlogo__image, .svg-Wikimedia-logo_black, .oo-ui-icon-userAvatar, .mw-ui-icon-userAvatar:before, .oo-ui-icon-userSpeechBubble, .oo-ui-icon-settings, .mw-ui-icon-settings:before, .oo-ui-indicator-down, .mw-echo-ui-notificationItemWidget-icon img[src="/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png"], .frb-inline-main img, .mwe-math-fallback-image-inline, .mwe-math-fallback-image-inline img, .mwe-math-element img, img[src*="LaTeX"], .oo-ui-buttonElement-button .oo-ui-iconElement-icon, .cnotice-toggle-box, .oo-ui-toolbar-bar .oo-ui-iconElement-icon, .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle .oo-ui-iconElement-icon, .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle .oo-ui-indicatorElement-indicator, #footer-icons img, .oo-ui-icon-bell, .mw-ui-icon-bell:before, .oo-ui-icon-tray, .mw-ui-icon-tray:before, .oo-ui-indicator-clear, .searchButton[name='go'], .vector-menu-dropdown .vector-menu-heading:after, .oo-ui-icon-article, .mw-ui-icon-article:before, .oo-ui-icon-speechBubbles, .mw-ui-icon-speechBubbles:before {
         filter: invert(1) hue-rotate(180deg);
     }
-    
+
     ul {
         list-style-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjEzIj4KCTxjaXJjbGUgY3g9IjIuNSIgY3k9IjkiIHI9IjIuNSIgZmlsbD0iI2NjYyIvPgo8L3N2Zz4K');
+    }
+
+    #mw-indicator-mw-helplink a {
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQloZWxwCgk8L3RpdGxlPgoJPHBhdGggZD0iTTEwIDBhMTAgMTAgMCAxIDAgMTAgMTBBMTAgMTAgMCAwIDAgMTAgMHptMSAxNkg5di0yaDJ6bTIuNzEtNy42YTIuNjQgMi42NCAwIDAgMS0uMzMuNzQgMy4xNiAzLjE2IDAgMCAxLS40OC41NWwtLjU0LjQ4Yy0uMjEuMTgtLjQxLjM1LS41OC41MmEyLjU0IDIuNTQgMCAwIDAtLjQ3LjU2QTIuMyAyLjMgMCAwIDAgMTEgMTJhMy43OSAzLjc5IDAgMCAwLS4xMSAxSDkuMDhhOC45IDguOSAwIDAgMSAuMDctMS4yNSAzLjI4IDMuMjggMCAwIDEgLjI1LS45IDIuNzkgMi43OSAwIDAgMSAuNDEtLjY3IDQgNCAwIDAgMSAuNTgtLjU4Yy4xNy0uMTYuMzQtLjMuNTEtLjQ0YTMgMyAwIDAgMCAuNDMtLjQ0IDEuODMgMS44MyAwIDAgMCAuMy0uNTUgMiAyIDAgMCAwIC4xMS0uNzIgMi4wNiAyLjA2IDAgMCAwLS4xNy0uODYgMS43MSAxLjcxIDAgMCAwLTEtLjkgMS43IDEuNyAwIDAgMC0uNS0uMSAxLjc3IDEuNzcgMCAwIDAtMS41My42OCAzIDMgMCAwIDAtLjUgMS44Mkg2LjE2YTQuNzQgNC43NCAwIDAgMSAuMjgtMS42OCAzLjU2IDMuNTYgMCAwIDEgLjgtMS4yOSAzLjg4IDMuODggMCAwIDEgMS4yOC0uODNBNC41OSA0LjU5IDAgMCAxIDEwLjE4IDRhNC40NCA0LjQ0IDAgMCAxIDEuNDQuMjMgMy41MSAzLjUxIDAgMCAxIDEuMTUuNjUgMy4wOCAzLjA4IDAgMCAxIC43OCAxLjA2IDMuNTQgMy41NCAwIDAgMSAuMjkgMS40NSAzLjM5IDMuMzkgMCAwIDEtLjEzIDEuMDF6IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K');
     }
 }
 
