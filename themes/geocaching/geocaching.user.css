@@ -3,7 +3,7 @@
 @namespace      queengooborg
 @author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]
 @description    A dark theme for the Geocaching.com website, as well as a few other related websites (Waymarking.com, GeoCheck.org, GeoChecker.com, Certitudes.org, PathTags.com, and Project-GC.com).  Colors are adjustable via the variables set on :root.  https://www.queengoob.org/darkthemes
-@version        3.2.0
+@version        3.3.0
 @license        GPL-3.0
 ==/UserStyle== */
 
@@ -235,20 +235,28 @@
         fill: var(--background-3);
     }
 
-    .list-details-section-controls select, #LeaderboardMain, .page-container {
+    .list-details-section-controls select, #LeaderboardMain, .page-container, .bg-white, .after\:bg-white:after {
         background-color: var(--background) !important;
     }
+    
+    .bg-grey-50 {
+        background-color: var(--background-2) !important;
+    }
 
-    .gc-modal-body ul.gc-modal-buttons .secondary button {
+    .gc-modal-body ul.gc-modal-buttons .secondary button, .text-grey-600\/45 {
         color: var(--foreground) !important;
     }
     
-    #LeaderboardMain h1.title {
+    #LeaderboardMain h1.title, .text-grey-600 {
         color: var(--foreground-2) !important;
     }
 
     .delete-list-cta {
         color: var(--error) !important;
+    }
+    
+    .text-blue-500 {
+        color: var(--link) !important;
     }
 
     .clickable-table-header.disabled, .old-price, .old.price, .data.switch .counter, .product-item .price-box .price-label, .gc-search-results-list-item.disabled, .typeahead-item-content.is-geocache a {
@@ -259,7 +267,7 @@
         border-right-color: var(--background-2);
     }
 
-    .products-grid .product-item-inner, .products-grid .product-item-inner:before {
+    .products-grid .product-item-inner, .products-grid .product-item-inner:before, .search-results-1p3m7a8-multiValue {
         background: var(--background-3) !important;
     }
 
@@ -723,6 +731,15 @@
 
 @-moz-document domain("certitudes.org") {
     /* -=- Certitude Styling -=- */
+    :root, :root.classic {
+        --back-image: none;
+        --card-bg: var(--background-2);
+        --card-edge: var(--background-3);
+        --user-link: var(--link);
+        --geo-link: var(--main);
+        --text-gradient: linear-gradient(var(--background), var(--background-3));
+    }
+    
     table#rk, #inputArea {
         background: var(--main-dark);
         color: var(--foreground);
